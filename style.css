@@ -1,0 +1,357 @@
+@import url("animation.css");
+
+:root {
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+html, body {
+	width: 100vw;
+	height: 100vh;
+	background-image: url(images/bg.gif);
+	background-repeat: repeat;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+* {
+	box-sizing: border-box;
+	position: absolute;
+}
+
+#frame {
+	left: 50%;
+	top: 50%;
+	width: 800px;
+	height: 600px;
+	transform: translate(-50%, -50%);
+	border-radius: 1.5rem;
+	overflow: hidden;
+	touch-action: none;
+}
+
+.background {
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+	.background .common-1 {
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	.background .common-2 {
+		width: 456px;
+		height: 416px;
+		background-image: url(shapes/79.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		opacity: 0.35;
+	}
+
+	.background > .background-image-1 {
+		width: 800px;
+		height: 600px;
+		background-image: url(shapes/76.svg);
+	}
+
+	.background > .background-image-2 {
+		left: 50%;
+		top: 50%;
+		width: 811px;
+		height: 800px;
+		background-image: url(shapes/78.svg);
+		transform: translate(-50%, -50%) scale(1.2, 1.2);
+	}
+
+	.background > .background-image-3 {
+		left: 50px;
+		top: 50px;
+		width: 796px;
+		height: 353px;
+		background-image: url(shapes/77.svg);
+		transform: translate(-50%, 0%) scale(1.2, 1.2);
+		opacity: 0.4;
+	}
+
+	.background > .spinning-star-1 {
+		left: -200px;
+		top: -150px;
+		animation: spinning-star-1 6s steps(360) infinite;
+	}
+
+	.background > .spinning-star-2 {
+		left: -110px;
+		top: 90px;
+		animation: spinning-star-2 6s steps(360) infinite;
+	}
+
+	.background > .spinning-star-3 {
+		left: 240px;
+		top: -90px;
+		animation: spinning-star-3 6s steps(360) infinite;
+	}
+
+	.background > .spinning-star-4 {
+		left: 280px;
+		top: 180px;
+		animation: spinning-star-4 6s steps(360) infinite;
+	}
+
+.stages {
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+}
+
+	.stages .common-1 {
+		z-index: 0;
+		top: -130px;
+		width: 804px;
+		height: 604px;
+		background-repeat: no-repeat;
+		background-size: contain;
+		transform: scale(0.28, 0.28);
+	}
+
+	.stages .common-2 {
+		z-index: 1;
+		left: 0px;
+		top: 0px;
+		width: 182px;
+		height: 225px;
+		background-image: url(shapes/122.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		transform: scale(0.65, 0.65);
+		display: none;
+	}
+
+	.stages .common-3 {
+		z-index: 2;
+		left: 0px;
+		top: 0px;
+		width: 804px;
+		height: 604px;
+		background-repeat: no-repeat;
+		background-size: contain;
+		display: none;
+		pointer-events: none;
+	}
+
+	.stages > .stage-forest {
+		left: -250px;
+		background-image: url(shapes/96.svg);
+	}
+
+		.stages > .stage-forest > .forest-boy {
+		}
+
+		.stages > .stage-forest > .forest-cover {
+			background-image: url(shapes/149.svg);
+		}
+
+	.stages > .stage-undersea {
+		left: -0px;
+		background-image: url(shapes/102.svg);
+	}
+
+		.stages > .stage-undersea > .undersea-boy {
+		}
+
+		.stages > .stage-undersea > .undersea-cover {
+			background-image: url(shapes/132.svg);
+		}
+
+	.stages > .stage-bathroom {
+		left: 250px;
+		background-image: url(shapes/105.svg);
+	}
+
+		.stages > .stage-bathroom > .bathroom-cover {
+			background-image: url(shapes/153.svg);
+		}
+
+.boy {
+	z-index: 20;
+	left: 310px;
+	top: 270px;
+	width: 181px;
+	height: 253px;
+	background-image: url(shapes/127.svg);
+	transform: scale(1.4, 1.4);
+	pointer-events: none;
+}
+
+.white-screen {
+	z-index: 50;
+	width: 100%;
+	height: 100%;
+	background-image: url(shapes/73.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: none;
+	pointer-events: none;
+}
+
+.cutie {
+	z-index: 55;
+	left: 50%;
+	top: 196px;
+	width: 460px;
+	height: 208px;
+	transform: translate(-50%, 0);
+	display: none;
+	pointer-events: none;
+}
+
+	.cutie .common {
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	.cutie > .cutie-flash {
+		left: calc(155px + 307px/2);
+		top: calc(80px + 95px/2);
+		width: 380px;
+		height: 380px;
+		background-image: url(sprites/5.svg);
+		transform: translate(-50%, -50%) scale(2, 2);
+		animation: cutie-flash 0.35s steps(6) infinite;
+	}
+
+	.cutie > .cutie-face {
+		left: 0px;
+		width: 145px;
+		height: 208px;
+		background-image: url(shapes/157.svg);
+	}
+
+	.cutie > .cutie-eyes {
+		left: 32px;
+		top: 90px;
+		width: 72px;
+		height: 21px;
+		background-image: url(shapes/158.svg);
+	}
+
+	.cutie > .cutie-message {
+		left: 155px;
+		top: 80px;
+		width: 304px;
+		height: 95px;
+		background-image: url(shapes/162.svg);
+	}
+
+.start-screen {
+	z-index: 50;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(shapes/81.svg);
+	opacity: 0.95;
+}
+
+	.start-screen > .start-screen-button {
+		z-index: 50;
+		left: 50%;
+		top: 50%;
+		width: 434px;
+		height: 155px;
+		background-image: url(shapes/82.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		transform: translate(-50%, -50%) scale(0.8, 0.8);
+	}
+
+
+.exit-button {
+	z-index: 899;
+	right: 20px;
+	bottom: 10px;
+	width: 64px;
+	height: 80px;
+}
+
+	.exit-button .common-1 {
+		height: 80px;
+		background-repeat: no-repeat;
+		background-size: contain;
+		pointer-events: none;
+	}
+
+	.exit-button .common-1 {
+		background-repeat: no-repeat;
+		background-size: contain;
+		pointer-events: none;
+	}
+
+	.exit-button .common-2 {
+		width: 42px;
+		height: 42px;
+		background-repeat: no-repeat;
+		background-size: contain;
+		pointer-events: none;
+	}
+
+	.exit-button > .exit-button-door-1 {
+		right: -5px;
+		width: 53px;
+		background-image: url(shapes/71.svg);
+		display: none;
+	}
+
+	.exit-button > .exit-button-door-2 {
+		width: 64px;
+		background-image: url(shapes/67.svg);
+	}
+
+	.exit-button > .exit-button-text-1 {
+		left: -15px;
+		top: 2px;
+		background-image: url(shapes/68.svg);
+	}
+
+	.exit-button > .exit-button-text-2 {
+		right: -5px;
+		bottom: 2px;
+		background-image: url(shapes/69.svg);
+	}
+
+.fullscreen {
+	z-index: 899;
+	left: 20px;
+	bottom: 10px;
+	width: 80px;
+	height: 80px;
+	background-image: url(shapes/fullscreen.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.autoplay {
+	z-index: 899;
+	left: 105px;
+	bottom: 10px;
+	width: 80px;
+	height: 80px;
+	background-image: url(shapes/autoplay-play.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.star-cursor {
+	z-index: 999;
+	width: 98px;
+	height: 98px;
+	background-image: url(sprites/star-cursor.svg);
+	background-repeat: no-repeat;
+	transform: translate(-50%,-50%);
+	animation: star-cursor 3s steps(39) infinite;
+	pointer-events: none;
+}

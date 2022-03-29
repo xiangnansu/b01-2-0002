@@ -1,0 +1,93 @@
+@keyframes cutie-flash {
+	to {
+		background-position: 0 -2280px;
+	}
+}
+
+@keyframes spinning-star-1 {
+	from {
+		transform: scale(0.5, 0.5);
+	}
+
+	to {
+		transform: scale(0.4, 0.4) rotate(-360deg);
+	}
+}
+
+@keyframes spinning-star-2 {
+	from {
+		transform: scale(0.35, 0.35);
+	}
+
+	to {
+		transform: scale(0.35, 0.35) rotate(-360deg);
+	}
+}
+
+@keyframes spinning-star-3 {
+	from {
+		transform: scale(0.4, 0.4);
+	}
+
+	to {
+		transform: scale(0.4, 0.4) rotate(-360deg);
+	}
+}
+
+@keyframes spinning-star-4 {
+	from {
+		transform: scale(0.5, 0.5);
+	}
+
+	to {
+		transform: scale(0.5, 0.5) rotate(-360deg);
+	}
+}
+
+@keyframes star-cursor {
+	to {
+		background-position: 0 -3822px;
+	}
+}
+
+@keyframes stage-forest
+{
+	0% {
+		left: -250px;
+		top: -130px;
+		transform: scale(0.28, 0.28);
+	}
+	100% {
+		left: -2px;
+		top: -2px;
+		transform: scale(1, 1);
+	}
+}
+
+@keyframes stage-undersea {
+	0% {
+		left: 0px;
+		top: -130px;
+		transform: scale(0.28, 0.28);
+	}
+
+	100% {
+		left: -2px;
+		top: -2px;
+		transform: scale(1, 1);
+	}
+}
+
+@keyframes stage-bathroom {
+	0% {
+		left: 250px;
+		top: -130px;
+		transform: scale(0.28, 0.28);
+	}
+
+	100% {
+		left: -2px;
+		top: -2px;
+		transform: scale(1, 1);
+	}
+}

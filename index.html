@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>捉迷藏</title>
+	<svg xmlns="http://www.w3.org/2000/svg">
+		<defs>
+			<filter id="sofGlow" height="300%" width="300%" x="-75%" y="-75%">
+				<feMorphology operator="dilate" radius="20" in="SourceAlpha" result="thicken" />
+				<feGaussianBlur in="thicken" stdDeviation="40" result="blurred" />
+				<feFlood flood-color="rgb(255,255,255)" result="glowColor" />
+				<feComposite in="glowColor" in2="blurred" operator="in" result="softGlow_colored" />
+				<feMerge>
+					<feMergeNode in="softGlow_colored" />
+					<feMergeNode in="SourceGraphic" />
+				</feMerge>
+			</filter>
+		</defs>
+	</svg>
+</head>
+<body>
+	<div id="frame">
+		<div class="background">
+			<div class="background-image-1 common-1"></div>
+			<div class="background-image-2 common-1"></div>
+			<div class="background-image-3 common-1"></div>
+			<div class="spinning-star-1 common-2"></div>
+			<div class="spinning-star-2 common-2"></div>
+			<div class="spinning-star-3 common-2"></div>
+			<div class="spinning-star-4 common-2"></div>
+		</div>
+		<div class="stages">
+			<div class="stage-forest common-1">
+				<div class="forest-boy common-2"></div>
+				<div class="forest-cover common-3"></div>
+			</div>
+			<div class="stage-undersea common-1">
+				<div class="undersea-boy common-2"></div>
+				<div class="undersea-cover common-3"></div>
+			</div>
+			<div class="stage-bathroom common-1">
+				<div class="bathroom-boy common-2"></div>
+				<div class="bathroom-cover common-3"></div>
+			</div>
+		</div>
+		<div class="boy"></div>
+		<div class="white-screen"></div>
+		<div class="cutie">
+			<div class="cutie-flash"></div>
+			<div class="cutie-face common"></div>
+			<div class="cutie-eyes common"></div>
+			<div class="cutie-message common"></div>
+		</div>
+		<div class="start-screen">
+			<div class="start-screen-button"></div>
+		</div>
+		<div class="exit-button">
+			<div class="exit-button-door-1 common-1"></div>
+			<div class="exit-button-door-2 common-1"></div>
+			<div class="exit-button-text-1 common-2"></div>
+			<div class="exit-button-text-2 common-2"></div>
+		</div>
+		<div class="fullscreen"></div>
+		<div class="autoplay"></div>
+		<div class="star-cursor"></div>
+	</div>
+	<script src="regenerator-runtime/runtime.js"></script>
+	<script src="hand.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>
